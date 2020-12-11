@@ -193,7 +193,7 @@ Please refer to the Project.ipynb file in this repository to see the exact distr
 
 
 
-## Models to predict star rating
+## Models
 
 I used Naïve Bayes and Random Forest models to predict star rating. 
 
@@ -205,7 +205,7 @@ I first analyzed the original dataset with all 5 categories as targets and then 
 
 Here is the code for the two sets of models:
 
-
+### Models to predict star rating
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -219,7 +219,7 @@ from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_sc
 train, test = train_test_split(df, test_size=.3, stratify=df.stars, random_state=315)
 ```
 
-### Naive Bayes
+#### Naive Bayes
 
 
 ```python
@@ -232,7 +232,7 @@ yhat11 = nb.predict(np.array(test['scores'] + 1).reshape(-1, 1))
 
 
 
-### Random forests
+#### Random forests
 
 
 ```python
@@ -243,7 +243,7 @@ rfc.fit(np.array(train['scores']).reshape(-1, 1), train['stars'])
 yhat12 = rfc.predict(np.array(test['scores']).reshape(-1, 1))
 ```
 
-## Models to detect a positive star rating
+### Models to detect a positive star rating
 
 In this section I used a different target variable - 'positive' to train models to differentiate between negative reviews (1&2 stars) and positive reviews (4&5 stars).
 
@@ -254,7 +254,7 @@ df_no_3['positive'] = df_no_3['stars'].apply(lambda x: 1 if x > 3 else 0)
 train_2, test_2 = train_test_split(df_no_3, test_size=.3, stratify=df_no_3['positive'], random_state=754)
 ```
 
-### Naive Bayes
+#### Naive Bayes
 
 
 ```python
@@ -265,7 +265,7 @@ nb.fit(np.array(train_2['scores'] + 1).reshape(-1, 1), train_2['positive'])
 yhat21 = nb.predict(np.array(test_2['positive'] + 1).reshape(-1, 1))
 ```
 
-### Random forests
+#### Random forests
 
 
 ```python
