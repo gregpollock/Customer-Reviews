@@ -193,7 +193,7 @@ Please refer to the Project.ipynb file in this repository to see the exact distr
 
 
 
-## Models
+## Classification Models
 
 I used Naïve Bayes and Random Forest models to predict star rating. 
 
