@@ -193,6 +193,7 @@ Please refer to the Project.ipynb file in this repository to see the exact distr
 
 
 
+## Models to predict star rating
 
 I used Naïve Bayes and Random Forest models to predict star rating. 
 
@@ -204,7 +205,6 @@ I first analyzed the original dataset with all 5 categories as targets and then 
 
 Here is the code for the two sets of models:
 
-## Models to predict star rating
 
 
 ```python
