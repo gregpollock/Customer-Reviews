@@ -187,21 +187,9 @@ display(df)
 
 There was enough data in each star category in general to train models, but one might be interested in the distribution of star ratings in the datasets and combined.
 
-The Amazon dataset was many times larger than the Yelp dataset, so the distribution of the combined dataset is dominated by the Amazon data distribution of star ratings.
+The Amazon dataset was several times larger than the Yelp dataset, so the distribution of the combined dataset is dominated by the Amazon data distribution of star ratings.
 
-Below we see first the Amazon distribution of star ratings followed by the Yelp distribution, and finally the combined dataset.
-
-
-```python
-plt.hist(amzn['stars'], bins=10)
-plt.title("Distribution of Amazon Star Ratings"); plt.xlabel("stars"); plt.ylabel("count"); plt.ylim((0,400000)); plt.show()
-
-plt.hist(yelp['stars'], bins=10)
-plt.title("Distribution of Yelp Star Ratings"); plt.xlabel("stars"); plt.ylabel("count"); plt.ylim((0,400000)); plt.show()
-
-plt.hist(df['stars'], bins=10)
-plt.title("Combined Distribution of Star Ratings"); plt.xlabel("stars"); plt.ylabel("count"); plt.ylim((0,400000)); plt.show()
-```
+Please refer to the Project.ipynb file in this repository to see the exact distribution of star ratings.
 
 
 
