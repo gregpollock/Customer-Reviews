@@ -217,15 +217,6 @@ plt.title("Combined Distribution of Star Ratings"); plt.xlabel("stars"); plt.yla
 ```
 
 
-![png](output_18_0.png)
-
-
-
-![png](output_18_1.png)
-
-
-
-![png](output_18_2.png)
 
 
 I used Naïve Bayes and Random Forest models to predict star rating. 
@@ -265,10 +256,6 @@ yhat11 = nb.predict(np.array(test['scores'] + 1).reshape(-1, 1))
 ```
 
 
-```python
-#%timeit np.mean(np.where(yhat11 == test['stars'], 1, 0)) # ACCURACY
-#%timeit accuracy_score(test['stars'], yhat11)
-```
 
 ### Random forests
 
@@ -379,12 +366,7 @@ print("\n\n(Pos/Neg): Random Forests\n\n", m22, "\n\n\tAccuracy: ", acc22)
 
 
 
-```python
-#print("5-STAR:\t   Naive Bayes"); print("F1 Score:\t", f1_score(test['stars'], yhat11, average = 'weighted')); print("Accuracy Score:\t", np.mean(np.where(yhat11 == test['stars'], 1, 0))); print("Recall Score:\t", recall_score(test['stars'], yhat11, average = 'weighted'))
-#print("\n5-STAR:\t   Random Forests"); print("F1 Score:\t", f1_score(test['stars'], yhat12, average = 'weighted')); print("Accuracy Score:\t", np.mean(np.where(yhat12 == test['stars'], 1, 0))); print("Recall Score:\t", recall_score(test['stars'], yhat12, average = 'weighted'))
-#print("\n\n( - / + ): Naive Bayes"); print("F1 Score:\t", f1_score(test_2['positive'], yhat21, average = 'weighted')); print("Accuracy Score:\t", np.mean(np.where(yhat21 == test_2['positive'], 1, 0))); print("Recall Score:\t", recall_score(test_2['positive'], yhat21, average = 'weighted'))
-#print("\n( - / + ): Random Forests"); print("F1 Score:\t", f1_score(test_2['positive'], yhat22, average = 'weighted')); print("Accuracy Score:\t", np.mean(np.where(yhat21 == test_2['positive'], 1, 0))); print("Recall Score:\t", recall_score(test_2['positive'], yhat21, average = 'weighted'))
-```
+
 
 ## Conclusion
 
